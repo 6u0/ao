@@ -1,0 +1,172 @@
+.artworks-intro {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    text-align: center;
+}
+
+.artworks-content h2 {
+    color: var(--deep-blue);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.artworks-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.artworks-gallery, .artworks-influence {
+    padding: 4rem 2rem;
+}
+
+.artworks-gallery h2, .artworks-influence h2 {
+    text-align: center;
+    color: var(--deep-blue);
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.artwork-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.artwork-card:hover {
+    transform: translateY(-10px);
+}
+
+.artwork-image {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.artwork-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.artwork-card:hover .artwork-image::after {
+    opacity: 1;
+}
+
+.artwork-image h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.artwork-image p {
+    font-size: 1.1rem;
+    margin: 0.2rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.artwork-info {
+    padding: 1.5rem;
+}
+
+.artwork-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.influence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.influence-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.influence-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-blue);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.influence-card:hover::before {
+    transform: scaleX(1);
+}
+
+.influence-card:hover {
+    transform: translateY(-10px);
+}
+
+.influence-card h3 {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.influence-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .artworks-intro {
+        padding: 2rem 1rem;
+    }
+
+    .artworks-content h2 {
+        font-size: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artwork-image {
+        height: 250px;
+    }
+
+    .influence-grid {
+        grid-template-columns: 1fr;
+    }
+} 
