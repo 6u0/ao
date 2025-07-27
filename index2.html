@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>ポートフォリオ | ホーム</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="p5js.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: #fff;
+            transition: opacity 0.3s ease-out;
+        }
+        #main-content {
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+        #main-content.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-screen"></div>
+    <div id="main-content">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">自己紹介</a></li>
+                    <li><a href="projects.html">プロジェクト</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-background"></div>
+                <div class="hero-content">
+                    <h1>新しい価値を<br>創造する</h1>
+                    <p class="hero-subtitle">X25033 PORTFOLIO</p>
+                </div>
+            </section>
+
+            <section class="feature-grid">
+                <div class="feature-item">
+                    <img src="images/feature1.jpg" alt="特徴1">
+                    <h3>クリエイティブな<br>デザイン</h3>
+                    <p>ユーザーを魅了する<br>革新的なデザイン</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/feature2.jpg" alt="特徴2">
+                    <h3>最新技術の<br>活用</h3>
+                    <p>モダンな技術で<br>実現する体験</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/feature3.jpg" alt="特徴3">
+                    <h3>ユーザー中心の<br>開発</h3>
+                    <p>使いやすさを追求した<br>インターフェース</p>
+                </div>
+            </section>
+
+            <section class="showcase">
+                <div class="showcase-content">
+                    <h2>革新的な<br>デザイン</h2>
+                    <p>最新のトレンドを取り入れながら、<br>独自の視点で表現します。</p>
+                    <img src="images/showcase1.jpg" alt="ショーケース1" class="showcase-image">
+                </div>
+            </section>
+
+            <section class="gallery">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/gallery1.jpg" alt="ギャラリー1">
+                        <div class="gallery-overlay">
+                            <h3>プロジェクト1</h3>
+                            <p>詳細を見る</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gallery2.jpg" alt="ギャラリー2">
+                        <div class="gallery-overlay">
+                            <h3>プロジェクト2</h3>
+                            <p>詳細を見る</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gallery3.jpg" alt="ギャラリー3">
+                        <div class="gallery-overlay">
+                            <h3>プロジェクト3</h3>
+                            <p>詳細を見る</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta">
+                <h2>一緒に、<br>新しい体験を<br>創造しましょう。</h2>
+                <a href="contact.html" class="cta-button">お問い合わせ</a>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ポートフォリオ</h4>
+                    <p>新しい体験を創造する</p>
+                </div>
+                <div class="footer-section">
+                    <h4>リンク</h4>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">自己紹介</a></li>
+                        <li><a href="projects.html">プロジェクト</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ソーシャル</h4>
+                    <ul>
+                        <li><a href="https://x.com/siv713304173303">Twitter</a></li>
+                        <li><a href="https://github.com/6u0">GitHub</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 student.like.curry.rice. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 
