@@ -4,24 +4,24 @@ let count = 0;
 let animationComplete = false;
 let fadeOutStarted = false;
 let fadeOpacity = 1;
-let targetCircleCount = 15; // 目標の円の数
+let targetCircleCount = 15; 
 
-// ページの読み込み状態を管理
+
 let isReload = false;
 
-// ページがアンロードされる前に実行
+
 window.addEventListener('beforeunload', () => {
   sessionStorage.setItem('isReloading', 'true');
 });
 
 function setup() {
-  // 初回訪問かどうかをチェック
+ 
   if (!localStorage.getItem('hasVisited')) {
-    // 初回訪問の場合
+    
     localStorage.setItem('hasVisited', 'true');
   }
 
-  // リロード時や初回訪問時はロード画面を表示
+ 
   if (sessionStorage.getItem('isReloading') || !localStorage.getItem('hasLoaded')) {
     sessionStorage.removeItem('isReloading');
     localStorage.setItem('hasLoaded', 'true');
@@ -31,7 +31,7 @@ function setup() {
     frameRate(60);
     startNewSet();
   } else {
-    // 通常のページ遷移の場合
+ 
     document.getElementById('loading-screen').style.display = 'none';
     document.getElementById('main-content').classList.add('visible');
   }
@@ -45,13 +45,13 @@ function draw() {
       const loadingScreen = document.getElementById('loading-screen');
       const mainContent = document.getElementById('main-content');
       
-      // ローディング画面をフェードアウト
+      
       loadingScreen.style.opacity = '0';
       
-      // ローディング画面が完全にフェードアウトしたら
+     
       setTimeout(() => {
         loadingScreen.style.display = 'none';
-        // メインコンテンツをフェードイン
+        
         mainContent.classList.add('visible');
       }, 300);
       return;
